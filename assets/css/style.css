@@ -2,4 +2,188 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
+    font-family: Montserrat;
+  }
+  
+  body {
+    background-color: #f6f8ff;
+  }
+  
+  .header {
+    width: 100%;
+    padding: 5em 20%;
+    background-color: #2c3148;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .header-title {
+    font-size: 30px;
+    padding-bottom: 1em;
+  }
+  
+  .header-subtitle {
+    font-size: 20px;
+  }
+  
+  .title {
+    margin: 1em 11%;
+    font-size: 20px;
+    color: #2c3148;
+    font-weight: 600;
+  }
+  
+  .searchbar {
+    width: 60%;
+    display: block;
+    margin: 5em auto 0 auto;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px #00000010;
+    height: 60px;
+    padding: 12px 24px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  .select {
+    border: 2px solid #f1f3f5;
+    box-shadow: 5px 5px 10px 0px #00000020;
+    padding: 10px 20px;
+    color: #2c3148;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    margin: 3em 1em 4em 10%;
+    cursor: pointer;
+  }
+  
+  .container-countries {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 80%;
+    background-color: #fff;
+    margin: auto;
+    padding: 2em 0;
+    border-radius: 20px;
+  }
+  
+  .card-countries {
+    width: 28%;
+    position: relative;
+    height: 60px;
+    box-shadow: 2px 2px 15px #00000010;
+    border-left: none;
+    border-radius: 3px;
+    margin-bottom: 1.5em;
+    display: flex;
+    align-items: center;
+  }
+  
+  .card-countries_action {
+      display: none;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: 10px;
+      right: 10px;
+  }
+  
+  .card-countries_label {
+    padding-left: 75px;
+  padding-right: 15px;
+    font-size: 16px;
+  }
+  
+  .card-countries_code {
+    transition: 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 60px;
+    border-radius: 3px;
+    background-color: #2c3148;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Show card */
+  .card-show {
+    max-width: 400px;
+    min-width: 300px;
+    background-color: #fff;
+    margin: 2em auto;
+    box-shadow: 0px 10px 20px 0px #0000001A;
+    padding: 25px;
+    position: relative;
+  }
+  
+  .card-show::after {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background:#00C6C0;
+  bottom: 0;
+  right: 0;
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  border-bottom-right-radius: 5px;
+  }
+  
+  .card-show_title {
+    font-family: Montserrat;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    border-bottom: 5px solid #f1f3f5;
+  }
+  
+  .card-show_list {
+    list-style-type: none;
+  }
+  
+  .card-show_item {
+    margin-bottom: 10px;
+  }
+  
+  /* Show card/ */
+  
+  /* Hover effects */
+  .card-countries:hover {
+      transition: .3s ease-in;
+      box-shadow: 2px 2px 15px #00000020;
+      cursor: pointer;
+  }
+  
+  .card-countries:hover .card-countries_action {
+      display: block;
+  }
+  
+  .card-countries:hover .card-countries_code {
+      background-color: #00C6C0;
+    }
+  /*Responsive Medium screen*/
+  
+  @media screen and (max-width:1100px){
+      .card-countries {
+          width: 45%;
+      }
+  }
+  
+  /*Responsive Small screen*/
+  @media screen and (max-width:550px){
+      .card-countries {
+          width: 90%;
+      }
+  }
+  
