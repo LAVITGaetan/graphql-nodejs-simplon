@@ -1,0 +1,10 @@
+<link rel="stylesheet" href="css/style.css">
+<h1>Hello there</h1>
+
+    <% continents.forEach(continent => {%>
+    <h2><%= continent.name%></h2>
+    <% continent.countries.forEach(country => {%>
+        <li><%= country.name %> </li>
+    <% }); %>
+   <% }); %> 
+
